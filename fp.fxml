@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#click" prefHeight="336.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.control">
+   <children>
+      <ImageView fitHeight="354.0" fitWidth="605.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/Saved%20Pictures/images%20(1).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="189.0" fitWidth="303.0" layoutX="57.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/未命名.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dice" layoutX="171.0" layoutY="291.0" mnemonicParsing="false" onAction="#act" prefHeight="31.0" prefWidth="41.0" text="骰" />
+      <TextField fx:id="yMoney" editable="false" layoutX="27.0" layoutY="282.0" opacity="0.81" prefHeight="23.0" prefWidth="67.0" />
+      <TextField fx:id="cMoney" editable="false" layoutX="27.0" layoutY="64.0" opacity="0.81" prefHeight="23.0" prefWidth="67.0" />
+      <TextField fx:id="pMoney" layoutX="30.0" layoutY="175.0" opacity="0.81" prefHeight="23.0" prefWidth="61.0" />
+      <TextField fx:id="cPoint" editable="false" layoutX="383.0" layoutY="42.0" opacity="0.7" prefHeight="23.0" prefWidth="41.0" />
+      <TextField fx:id="yPoint" editable="false" layoutX="518.0" layoutY="299.0" opacity="0.7" prefHeight="23.0" prefWidth="41.0" />
+      <TextField layoutX="299.0" layoutY="42.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: black; -fx-text-fill: white;" text="電腦骰到的:" />
+      <TextField layoutX="434.0" layoutY="299.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: black; -fx-text-fill: white;" text="你骰到的:" />
+      <TextField layoutX="27.0" layoutY="42.0" prefHeight="23.0" prefWidth="67.0" style="-fx-background-color: black; -fx-text-fill: white;" text="電腦籌碼">
+         <font>
+            <Font name="Arial Narrow" size="12.0" />
+         </font></TextField>
+      <TextField layoutX="30.0" layoutY="152.0" prefHeight="23.0" prefWidth="61.0" style="-fx-text-fill: white; -fx-background-color: black;" text="彩池">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></TextField>
+      <TextField layoutX="27.0" layoutY="260.0" prefHeight="23.0" prefWidth="67.0" style="-fx-background-color: black; -fx-text-fill: white;" text="你的籌碼">
+         <font>
+            <Font name="AncientClock" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="scan" layoutX="468.0" layoutY="186.0" onKeyPressed="#key" opacity="0.5" prefHeight="23.0" prefWidth="124.0" />
+      <TextField layoutX="419.0" layoutY="186.0" prefHeight="23.0" prefWidth="49.0" style="-fx-background-color: black; -fx-text-fill: white;" text="輸入:" />
+      <TextField fx:id="cb" layoutX="302.0" layoutY="14.0" opacity="0.7" prefHeight="23.0" prefWidth="61.0" promptText="名字" />
+      <TextField fx:id="yb" layoutX="446.0" layoutY="269.0" onKeyPressed="#key_name" opacity="0.71" prefHeight="23.0" prefWidth="61.0" promptText="名字" />
+      <TextArea fx:id="screen" editable="false" layoutX="321.0" layoutY="109.0" opacity="0.49" prefHeight="75.0" prefWidth="271.0">
+         <font>
+            <Font size="21.0" />
+         </font></TextArea>
+      <ImageView fitHeight="100.0" fitWidth="164.0" layoutX="131.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/Saved%20Pictures/images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="172.0" layoutX="274.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/Saved%20Pictures/7683dfe73cb6c3934a9ce9eea943493d6ef40d6f.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dice1" fitHeight="31.0" fitWidth="32.0" layoutX="182.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="dice2" fitHeight="31.0" fitWidth="32.0" layoutX="146.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="dice3" fitHeight="31.0" fitWidth="32.0" layoutX="198.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane fx:id="endpane" layoutX="1.0" layoutY="-1.0" prefHeight="336.0" prefWidth="600.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <TextField fx:id="endtext" layoutX="196.0" layoutY="104.0" prefHeight="44.0" prefWidth="203.0" style="-fx-background-color: black; -fx-text-fill: white;">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </TextField>
+            <Button fx:id="againbuttom" layoutX="160.0" layoutY="187.0" mnemonicParsing="false" onAction="#againpressed" onKeyPressed="#againpressed" text="重新一局" />
+            <Button fx:id="closebuttom" layoutX="373.0" layoutY="187.0" mnemonicParsing="false" onAction="#closepressed" onKeyPressed="#closepressed" text="關閉遊戲" />
+         </children>
+      </Pane>
+      <ImageView fx:id="gg" fitHeight="336.0" fitWidth="339.0" layoutX="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../../Pictures/Saved%20Pictures/女鬼圖.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
